@@ -18,3 +18,20 @@
 // 5 распечатать получившийся массив
 
 
+string text = "124fgsdf2548sadfgf";
+char[] phrase = text.ToCharArray();
+
+Console.WriteLine("Исходная фраза:");
+Console.WriteLine(text);
+
+
+string newText = String.Empty;
+int i = 0;
+while (i < phrase.Length)
+{
+    if (!(phrase[i] >= '0' && phrase[i] <= '9'))
+        newText += phrase[i];
+    i++;
+}
+Console.WriteLine("Новая фраза после удаления цифр из нее :");
+Console.WriteLine(newText);
